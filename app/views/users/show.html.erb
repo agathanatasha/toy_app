@@ -11,7 +11,7 @@
 </p>
 <p>
   <strong>First Micropost:</strong>
-  <%= @user.microposts.first.content%>
+  <%= @user.microposts.empty? ? "NOTHING FOUND! GO CREATE ONE" : @user.microposts.first.content%>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
